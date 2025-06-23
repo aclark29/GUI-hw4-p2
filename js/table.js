@@ -66,7 +66,12 @@ function generateTable(l1, h1, l2, h2) {
 // whenever an input changes, if the inputs are valid call main
 // which generates the table
 $("#formArea input").on('input', function() {
-  if ($("#formArea").valid()) {
     main();
-  }
+    if (!$("#formArea").valid()) {
+        const old = document.getElementById("multTable");
+        if (old) {
+            old.remove();
+            document.getElementById("container").style.border = 'none';
+        }
+    }
 });
