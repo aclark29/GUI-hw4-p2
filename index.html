@@ -1,0 +1,63 @@
+<!--Name: Andrew Clark
+    Date: 6/22/25
+    Assignment: HW4 part 2
+    Summary: Use jQuaery validation to validate form inputs of 4 numbers. Then
+    constructs a dynamic multiplication table using those 4 numbers. jQuery
+    sliders are also used as a method of data entry. Error messages are show if
+    invalid data is input. Can save multiplication tables as tabs, and click between
+    them or delete them.-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Multiplication Table</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <h2> Homework 4 -- Dynamic Multiplication Table</h2>
+    <h4> Andrew Clark</h4>
+    <form id="formArea">
+        <div>
+            <label for="lowFirst">Horizontal start number:</label>
+            <input type="text" id="lowFirst" name="lowFirst">
+            <div class='slider' id="sliderLowFirst"></div>
+        </div>
+        <div>
+            <label for="highFirst">Horizontal end number:</label>
+            <input type="text" id="highFirst" name="highFirst"> <!--check that 2nd num is higher with JS-->
+            <div class='slider' id="sliderHighFirst"></div>
+        </div>
+        <div>
+            <label for="lowSecond">Vertical start number:</label>
+            <input type="text" id="lowSecond" name="lowSecond">
+            <div class='slider' id="sliderLowSecond"></div>
+        </div>
+        <div>
+            <label for="highSecond">Vertical end number:</label>
+            <input type="text" id="highSecond" name="highSecond">
+            <div class='slider' id="sliderHighSecond"></div>
+        </div>
+        <button type="button" onclick="saveTab()"> Save </button>
+    </form>
+    <!--uses a div so that the container is scrollable-->
+    <div id="outer">
+        <div id="container"></div>
+    </div>
+
+    <button id="deleteTabsButton">Delete Selected Tabs</button>
+    <div id="outerWrapperTabs">
+        <div id="tabContainer">
+            <ul id="tabsList"></ul>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/sliders.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/table.js"></script>
+  </body>
+</html>

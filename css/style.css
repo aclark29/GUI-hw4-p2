@@ -1,0 +1,151 @@
+/*
+Andrew Clark
+GUI I - HW4 - part 2
+6/22/25
+
+all CSS contained here, changed table look, page background, form area, buttons, etc.
+*/
+
+body {
+    background-color: #743f3f;
+}
+
+h2, h4 {
+    margin-left: 40px;
+}
+
+#formArea {
+    width: 25%;
+    background-color:rgb(61, 154, 101);
+    font-size:large;
+    border: 2px solid black;
+    margin: 20px 20px 0px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#formArea label {
+    width: 90%;
+    padding: 16px;
+}
+
+#formArea input {
+    width: 80px;
+}
+
+#formArea button {
+    width: 20%;
+    margin: 0px 10px;
+}
+
+#outer {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#container {
+    display: inline-block;
+    margin: 0px auto;
+    max-height: 400px;
+    max-width: 90%;
+    overflow: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#multTable {
+    margin:0px;
+    width: max-content;
+    border-collapse: separate;
+    border-spacing: 0;
+    table-layout: fixed;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+#multTable thead th {
+    position: sticky;
+    top: 0;
+    background-color: goldenrod;
+    color: rgb(34, 1, 57);
+    padding: 0px;
+    z-index: 3;
+    border-bottom: 1px solid black;
+}
+
+#multTable td, #multTable th {
+    width: 50px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    text-align: center;
+}
+
+#multTable tbody th { 
+  position: sticky;
+  left: 0;
+  background-color: goldenrod;
+  color: rgb(34, 1, 57);
+  z-index: 2;
+}
+
+#multTable thead th:first-child {
+    left: 0;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    z-index: 4;
+}
+
+#multTable tr:nth-child(even) {
+    background-color:steelblue;
+}
+
+#multTable tr:nth-child(odd) {
+    background-color:aquamarine;
+}
+
+label.error {
+    color: rgb(177, 10, 10);
+    display: inline-block;
+    font-weight: bold;
+}
+
+.slider {
+    margin: 10px 10px;
+}
+
+.ui-slider {
+    background-color:rgb(109, 110, 97);
+}
+
+.ui-slider-handle {
+    background-color:rgb(54, 54, 90);
+}
+
+#outerWrapperTabs {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#tabContainer {
+    display: none;
+    margin: 0px auto;
+    max-width: 90%;
+    max-height: 400px;
+    overflow: auto;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:rgb(83, 83, 109);
+}
+
+#deleteTabsButton {
+    background-color: rgb(21, 19, 28);
+    color:aliceblue;
+    width: 140px;
+    height: 50px;
+    margin-left: 20px;
+    font-size:large;
+}
+
+#deleteTabsButton:hover {
+    color: red;
+}
