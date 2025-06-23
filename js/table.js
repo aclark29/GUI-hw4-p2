@@ -63,8 +63,8 @@ function generateTable(l1, h1, l2, h2) {
     container.style.border = '8px solid black';
 }
 
-// whenever an input changes, if the inputs are valid call main
-// which generates the table
+// whenever an input changes, call main
+// if the inputs aren't valid, remove the table
 $("#formArea input").on('input', function() {
     main();
     if (!$("#formArea").valid()) {
